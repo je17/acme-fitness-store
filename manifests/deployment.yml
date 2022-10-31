@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "awvseaks-8917"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "awvseaks-8917"
+  template:
+    metadata:
+      labels:
+        app: "awvseaks-8917"
+    spec:
+      containers:
+        - name: "awvseaks-8917"
+          image: "acrworkflow1667249829207.azurecr.io/awvseaks"
+          ports:
+          - containerPort: 80
